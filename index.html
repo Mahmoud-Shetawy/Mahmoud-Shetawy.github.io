@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mahmoud Shetawy — Backend Engineer</title>
+  <meta name="description" content="Mahmoud Shetawy, Backend Engineer (NestJS, TypeScript). Order scheduling, loyalty and payments, feature flags and partner integrations for a Saudi automotive-services platform.">
+  <meta name="author" content="Mahmoud Shetawy">
+  <meta name="theme-color" content="#0b0d11">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mahmoud Shetawy — Backend Engineer">
+  <meta property="og:description" content="NestJS · TypeScript. Order scheduling, loyalty and payments, feature flags, partner integrations — explained with interactive demos.">
+  <meta property="og:url" content="https://mahmoud-shetawy.github.io/">
+  <meta property="og:image" content="https://mahmoud-shetawy.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mahmoud Shetawy, Backend Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mahmoud-shetawy.github.io/">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=16">
+  <script>
+    // Apply the saved theme before first paint.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="1.5" y="1.5" width="21" height="21" rx="2" fill="#fff" stroke="none"/><path fill="#0A66C2" stroke="none" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="#FF0000" stroke="none" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#fff" stroke="none" d="M9.545 15.568V8.432L15.818 12z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13h4"/><path d="M10 17h4"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    </defs>
+  </svg>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top">Mahmoud Shetawy<span class="brand__dot">.</span></a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme" id="themeBtn" type="button" aria-label="Switch colour theme">
+        <span class="theme__dot" aria-hidden="true"></span><span id="themeLabel">dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <div class="hero__copy">
+          <div class="hero__id">
+            <div class="avatar">
+              <span class="avatar__initials" aria-hidden="true">MS</span>
+              <img class="avatar__img" src="assets/photo.jpg" alt="Photo of Mahmoud Shetawy" width="176" height="176" onerror="this.remove()">
+            </div>
+            <p class="status"><span class="pulse" aria-hidden="true"></span>Currently at Mismar · Cairo, Egypt</p>
+          </div>
+          <h1>Mahmoud<br>Shetawy</h1>
+          <p class="role">Backend Engineer <span>NestJS · TypeScript · Node.js</span></p>
+          <p class="lede">
+            I build the parts of a product where <strong>business rules, data and money</strong> meet, and I care
+            about getting them right. Today that means order completion estimates, loyalty points and
+            partner integrations for a Saudi automotive-services platform.
+          </p>
+          <div class="cta">
+            <a class="btn btn--solid" href="assets/Mahmoud_Shetawy_CV.pdf" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
+            <a class="btn" href="#work">See my work <span aria-hidden="true">↓</span></a>
+            <a class="btn" href="mailto:mahmoud.shetawy22@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+          </div>
+          <p class="social">
+            <a class="social--linkedin" href="https://linkedin.com/in/mahmoud-shetawy" target="_blank" rel="noopener"><svg class="ico ico--brand" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="social--github" href="https://github.com/Mahmoud-Shetawy" target="_blank" rel="noopener"><svg class="ico ico--brand" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+            <a class="social--youtube" href="https://youtu.be/pXfWjVmdiQc" target="_blank" rel="noopener"><svg class="ico ico--brand" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</a>
+          </p>
+        </div>
+
+        <aside class="glance" aria-label="Profile at a glance">
+          <div class="glance__bar">
+            <span class="glance__title">At a glance</span>
+            <div class="seg seg--tabs" role="tablist" aria-label="Profile format">
+              <button type="button" role="tab" aria-selected="true" aria-controls="gProfile" id="gTabProfile" class="is-on">Profile</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="gJson" id="gTabJson">JSON</button>
+            </div>
+          </div>
+
+          <dl class="glance__list" id="gProfile" role="tabpanel" aria-labelledby="gTabProfile">
+            <div><dt>Experience</dt><dd><span class="xp" id="xpTotal">2+ years</span> <span>· backend development</span></dd></div>
+            <div><dt>Currently</dt><dd>Mismar <span>· Saudi automotive services</span></dd></div>
+            <div><dt>Platform scale</dt><dd>1M+ customers <span>· ~31k orders a month</span></dd></div>
+            <div><dt>Focus</dt><dd>Orders, loyalty points, integrations</dd></div>
+            <div><dt>Core stack</dt><dd>NestJS, TypeScript, Node.js, MySQL, Redis</dd></div>
+            <div><dt>Location</dt><dd>Cairo, Egypt <span>· open to remote</span></dd></div>
+            <div><dt>Languages</dt><dd>Arabic <span>(native)</span>, English <span>(professional)</span></dd></div>
+            <div><dt>Education</dt><dd>B.Sc. Computer Science <span>· ITI diploma</span></dd></div>
+            <div><dt>Military status</dt><dd>Final exemption</dd></div>
+          </dl>
+
+          <pre class="glance__json" id="gJson" role="tabpanel" aria-labelledby="gTabJson" hidden><code><span class="c-dim">GET /engineers/mahmoud-shetawy</span>
+<span class="c-dim">HTTP/1.1</span> <span class="c-ok">200 OK</span>
+
+{
+  <span class="c-key">"name"</span>: <span class="c-str">"Mahmoud Shetawy"</span>,
+  <span class="c-key">"role"</span>: <span class="c-str">"Backend Engineer"</span>,
+  <span class="c-key">"company"</span>: <span class="c-str">"Mismar"</span>,
+  <span class="c-key">"stack"</span>: [<span class="c-str">"NestJS"</span>, <span class="c-str">"TypeScript"</span>],
+  <span class="c-key">"focus"</span>: [
+    <span class="c-str">"orders"</span>,
+    <span class="c-str">"loyalty &amp; payments"</span>,
+    <span class="c-str">"integrations"</span>
+  ],
+  <span class="c-key">"location"</span>: <span class="c-str">"Cairo, Egypt"</span>,
+  <span class="c-key">"remote"</span>: <span class="c-num">true</span>
+}</code></pre>
+        </aside>
+      </div>
+
+      <div class="wrap">
+        <dl class="facts">
+          <div><dt>1M+</dt><dd>customers served by the platform I build for</dd></div>
+          <div><dt>~31k</dt><dd>orders a month, from direct customers, business clients and partner platforms</dd></div>
+          <div><dt>60+</dt><dd>Jira stories shipped since Sep 2025, across 450+ commits</dd></div>
+          <div><dt>35+</dt><dd>database migrations I wrote and shipped to production</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="sec" id="about">
+      <div class="wrap split">
+        <header class="sec__head">
+          <p class="eyebrow">About</p>
+          <h2>A backend engineer who starts with the business rule.</h2>
+        </header>
+        <div class="prose">
+          <p>
+            I studied Computer Science, interned as a DevOps engineer at Fawry, then completed ITI's nine-month
+            open-source diploma. Since September 2025 I have been building production NestJS services that
+            customers, workshops and business partners rely on every day.
+          </p>
+          <p>
+            Most of my work sits where a mistake costs real money or breaks a promise to a customer, so I focus on
+            correctness: safe feature rollouts, exact money calculations, careful database migrations, and tests
+            around the flows that matter most.
+          </p>
+          <div class="how">
+            <p class="how__k">How I work</p>
+            <ol class="steps">
+              <li>Understand the business rule first.</li>
+              <li>Read the real code path.</li>
+              <li>Keep the change small and tested.</li>
+              <li>Leave the system easier to change.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="sec sec--alt" id="work">
+      <div class="wrap">
+        <header class="sec__head sec__head--wide">
+          <p class="eyebrow">Selected work</p>
+          <h2>Four systems I built at Mismar.</h2>
+          <p class="sec__sub">
+            For each one: the problem, what I built, and why it matters. Next to it is a small demo you can play with.
+          </p>
+          <p class="note">The demos use invented rules, names and numbers. No company code, data or business rules are shown.</p>
+        </header>
+
+        <!-- ---- 1. Completion estimate ---- -->
+        <article class="case" id="case-estimate">
+          <div class="case__text">
+            <p class="case__no"><b>01</b> Order completion estimate</p>
+            <h3>A completion date that stays honest when suppliers, approvals and the calendar change.</h3>
+            <dl class="points">
+              <div><dt>The problem</dt><dd>A service order is made of several jobs. Each job depends on supplier lead times and workshop time, starts only after the customer approves it, and some jobs run in parallel. Customers, operations and business partners all need one reliable completion date, and it has to update whenever the order changes.</dd></div>
+              <div><dt>What I built</dt><dd>
+                <ul class="did">
+                  <li>A per-job estimate that combines <strong>supplier lead time and workshop time</strong> and starts from the approval.</li>
+                  <li>A <strong>working-day calendar</strong>: non-working days are skipped and compensated until the result is stable, and approval timing decides when work can start.</li>
+                  <li>An order-level estimate where <strong>parallel work is counted once</strong> instead of being added up.</li>
+                  <li><strong>Recalculation on every relevant change</strong>, <strong>event-driven sync</strong> to partner systems through queues, and a backfill for historical orders.</li>
+                  <li>The rules isolated in <strong>pure, unit-tested domain modules</strong> with no framework or database code.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Why it matters</dt><dd>Customers, operations and partners see the same date, and it stays correct as the order changes.</dd></div>
+            </dl>
+            <ul class="tags"><li>NestJS</li><li>MySQL</li><li>BullMQ</li><li>Domain modelling</li><li>Jest</li></ul>
+          </div>
+
+          <div class="panel" data-demo="estimate">
+            <div class="panel__bar"><span><i class="live" aria-hidden="true"></i>Interactive demo · completion estimate</span><span class="panel__tag">example model</span></div>
+            <div class="panel__body">
+              <p class="try">Change a supplier's lead time, the work needed, or when each job is approved.</p>
+
+              <div class="quotes">
+                <fieldset class="quote" data-q="0">
+                  <legend><i class="sw sw--q0" aria-hidden="true"></i>Job A</legend>
+                  <label class="range">Supplier lead time <output data-out="edt">3d</output><input type="range" data-k="edt" min="0" max="5" value="3"></label>
+                  <label class="range">Work needed <output data-out="ert">2d</output><input type="range" data-k="ert" min="1" max="4" value="2"></label>
+                  <label class="range">Approved on <output data-out="day">day 1</output><input type="range" data-k="day" min="0" max="4" value="0"></label>
+                  <label class="switch"><input type="checkbox" data-k="late"><span class="switch__ui"></span>Approved late in the day</label>
+                </fieldset>
+                <fieldset class="quote" data-q="1">
+                  <legend><i class="sw sw--q1" aria-hidden="true"></i>Job B</legend>
+                  <label class="range">Supplier lead time <output data-out="edt">1d</output><input type="range" data-k="edt" min="0" max="5" value="1"></label>
+                  <label class="range">Work needed <output data-out="ert">2d</output><input type="range" data-k="ert" min="1" max="4" value="2"></label>
+                  <label class="range">Approved on <output data-out="day">day 2</output><input type="range" data-k="day" min="0" max="4" value="1"></label>
+                  <label class="switch"><input type="checkbox" data-k="late" checked><span class="switch__ui"></span>Approved late in the day</label>
+                </fieldset>
+              </div>
+
+              <label class="range range--inline">Extra days added by operations <output id="eExtOut">0d</output>
+                <input type="range" id="eExt" min="0" max="3" value="0">
+              </label>
+
+              <div class="gantt" id="gantt" role="img" aria-label="Timeline of both jobs and the order"></div>
+              <ul class="legend" aria-hidden="true">
+                <li><i class="lg lg--wait"></i>starts next day</li>
+                <li><i class="lg lg--parts"></i>light: waiting for supplier</li>
+                <li><i class="lg lg--work"></i>solid: work</li>
+                <li><i class="lg lg--ext"></i>extra days</li>
+                <li><i class="lg lg--fri"></i>non-working day</li>
+              </ul>
+
+              <div class="readout" aria-live="polite">
+                <div><span class="readout__k">Order completes</span><span class="readout__v" id="eEta">—</span></div>
+                <div><span class="readout__k">Order estimate</span><span class="readout__v" id="eTotal">—</span></div>
+                <div><span class="readout__k">Simply added up</span><span class="readout__v readout__v--muted" id="eSum">—</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- 2. Loyalty points ---- -->
+        <article class="case" id="case-points">
+          <div class="case__text">
+            <p class="case__no"><b>02</b> Loyalty points</p>
+            <h3>Loyalty points that behave like money, wherever they are earned or spent.</h3>
+            <dl class="points">
+              <div><dt>The problem</dt><dd>Customers earn points on purchases and subscriptions, spend them at checkout, and can bring in points from partner programs. Points and currency must convert the same way everywhere, expire on schedule, survive refunds, and never be credited twice.</dd></div>
+              <div><dt>What I built</dt><dd>
+                <ul class="did">
+                  <li><strong>Configurable earning rules</strong> per product and subscription, exposed consistently across the APIs.</li>
+                  <li><strong>One rounding policy</strong> for points and currency, applied at checkout, on invoices and in balances.</li>
+                  <li><strong>Refund handling</strong> that restores spent points and reverses earned ones, so a refunded order nets to zero.</li>
+                  <li><strong>Scheduled expiry</strong>, and notifications sent only <strong>after the transaction commits</strong>.</li>
+                  <li>An <strong>idempotent partner transfer API</strong>: a retried request returns the original result instead of crediting twice.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Why it matters</dt><dd>Balances stay consistent across checkout, subscriptions and partners, and integrations are safe to retry.</dd></div>
+            </dl>
+            <ul class="tags"><li>Monetary precision</li><li>Idempotency</li><li>Scheduled jobs</li><li>Transactions</li><li>Partner API</li></ul>
+          </div>
+
+          <div class="panel" data-demo="points">
+            <div class="panel__bar"><span><i class="live" aria-hidden="true"></i>Interactive demo · points ledger</span><span class="panel__tag">example model</span></div>
+            <div class="panel__body">
+              <p class="try">Pay with points, then refund: the balance must land exactly where it started. Then send a partner transfer and retry it.</p>
+              <div class="wallet">
+                <div>
+                  <span class="readout__k">Points balance</span>
+                  <span class="wallet__v" id="bBalance">500</span>
+                </div>
+                <p class="wallet__rule">Example rules: 10 pts = 1.00 · earn 5% of the amount paid · tax 15% · partner rate 2 : 1</p>
+              </div>
+
+              <div class="sub">
+                <p class="sub__k">Checkout</p>
+                <div class="controls">
+                  <div class="field">
+                    <span class="field__k">Order subtotal</span>
+                    <div class="seg" role="group" aria-label="Order subtotal" id="bAmounts">
+                      <button type="button" data-amount="120">120</button>
+                      <button type="button" data-amount="300" class="is-on">300</button>
+                      <button type="button" data-amount="449.99">449.99</button>
+                    </div>
+                  </div>
+                  <label class="range">Redeem <output id="bRedeemOut">200 pts</output>
+                    <input type="range" id="bRedeem" min="0" max="500" step="50" value="200">
+                  </label>
+                </div>
+                <dl class="receipt" id="bReceipt"></dl>
+                <div class="actions">
+                  <button class="btn btn--solid btn--sm" type="button" id="bPay">Pay</button>
+                  <button class="btn btn--sm" type="button" id="bRefund" disabled>Refund it</button>
+                </div>
+              </div>
+
+              <div class="sub">
+                <p class="sub__k">Partner transfer <code id="bTx">transactionId: TX-1001</code></p>
+                <div class="actions">
+                  <div class="seg" role="group" aria-label="Partner points to transfer" id="bPartnerPts">
+                    <button type="button" data-pts="200">200 partner pts</button>
+                    <button type="button" data-pts="500" class="is-on">500 partner pts</button>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="btn btn--solid btn--sm" type="button" id="bSend">Send transfer</button>
+                  <button class="btn btn--sm" type="button" id="bRetry" disabled>Retry same request</button>
+                  <button class="btn btn--sm" type="button" id="bNew" disabled>New transfer</button>
+                </div>
+              </div>
+
+              <p class="verdict" id="bVerdict" aria-live="polite"></p>
+              <ol class="ledger" id="bLedger" aria-label="Points ledger"></ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- 3. Feature flags ---- -->
+        <article class="case" id="case-flags">
+          <div class="case__text">
+            <p class="case__no"><b>03</b> Feature flag platform</p>
+            <h3>Gradual rollouts where any doubt keeps the feature off.</h3>
+            <dl class="points">
+              <div><dt>The problem</dt><dd>New features should reach users gradually. If the flag service is slow, not yet synced or failing, nothing may switch on by accident, and business code should not be tied to one vendor.</dd></div>
+              <div><dt>What I built</dt><dd>
+                <ul class="did">
+                  <li>A <strong>ports-and-adapters</strong> design: a provider-agnostic port, an <strong>Unleash</strong> adapter and a service. Nothing else in the codebase imports the vendor SDK.</li>
+                  <li>A <strong>custom NestJS decorator and guard</strong>: one line gates a route or a whole controller.</li>
+                  <li><strong>Fail-closed</strong> everywhere: a disabled flag, a <strong>sync timeout</strong> or any unexpected error inside the guard all deny the same way.</li>
+                  <li>Denials go through the app's own exception handling, so users get a clean error instead of an uncaught server error.</li>
+                  <li>Unit tests for the adapter and the guard.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Why it matters</dt><dd>Features roll out safely, and swapping the flag vendor touches one adapter, not the business code.</dd></div>
+            </dl>
+            <ul class="tags"><li>Unleash</li><li>Ports and adapters</li><li>Decorators</li><li>Guards</li><li>Jest</li></ul>
+          </div>
+
+          <div class="panel" data-demo="flags">
+            <div class="panel__bar"><span><i class="live" aria-hidden="true"></i>Interactive demo · flag check</span><span class="panel__tag">example model</span></div>
+            <div class="panel__body">
+              <p class="try">Break the provider, then send a request.</p>
+              <pre class="snippet"><code><span class="c-dim">// illustrative example</span>
+<span class="c-key">@Post</span>(<span class="c-str">'reports'</span>)
+<span class="c-key">@FeatureFlag</span>(<span class="c-str">'new-report'</span>)
+create() { <span class="c-dim">/* business code, no vendor SDK */</span> }</code></pre>
+
+              <div class="controls controls--fit">
+                <div class="field">
+                  <span class="field__k">Flag in Unleash</span>
+                  <div class="seg" role="group" aria-label="Flag state" id="fFlag">
+                    <button type="button" data-v="on" class="is-on">on</button>
+                    <button type="button" data-v="off">off</button>
+                  </div>
+                </div>
+                <div class="field">
+                  <span class="field__k">Provider</span>
+                  <div class="seg" role="group" aria-label="Provider state" id="fProv">
+                    <button type="button" data-v="healthy" class="is-on">healthy</button>
+                    <button type="button" data-v="timeout">sync timeout</button>
+                    <button type="button" data-v="down">unreachable</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flow" id="flow">
+                <div class="node" data-n="0"><b>Request</b><i>POST /reports</i></div>
+                <span class="wire" data-w="0"></span>
+                <div class="node" data-n="1"><b>Guard</b><i>@FeatureFlag</i></div>
+                <span class="wire" data-w="1"></span>
+                <div class="node" data-n="2"><b>Port</b><i>adapter</i></div>
+                <span class="wire" data-w="2"></span>
+                <div class="node" data-n="3"><b>Unleash</b><i>vendor</i></div>
+              </div>
+
+              <div class="actions">
+                <button class="btn btn--solid btn--sm" type="button" id="fSend">Send request</button>
+                <span class="verdict" id="fVerdict" aria-live="polite"></span>
+              </div>
+              <pre class="console" id="fLog" aria-label="Evaluation log"><code>waiting for a request…</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- 4. Handover verification ---- -->
+        <article class="case" id="case-codes">
+          <div class="case__text">
+            <p class="case__no"><b>04</b> Handover verification</p>
+            <h3>Verifiable handovers, controlled by layered settings.</h3>
+            <dl class="points">
+              <div><dt>The problem</dt><dd>During a service, a customer's car changes hands more than once. Each handover should be verifiable with a short code, but only where the business has enabled it, and the rules differ for each channel the platform serves.</dd></div>
+              <div><dt>What I built</dt><dd>
+                <ul class="did">
+                  <li>A <strong>layered settings model</strong>, from the broadest level to the most specific, where every layer must allow verification. Admin APIs and validation sit on top.</li>
+                  <li>A clear policy for <strong>when the answer is decided</strong>. I first stored it on each order at creation. When the business wanted setting changes to reach open orders, I moved to a <strong>live check at completion</strong> and retired the stored value safely.</li>
+                  <li>Rules that skip a code when there is nobody on the other side to confirm it, so orders are never blocked for no reason.</li>
+                  <li>The same rules enforced across <strong>the customer apps, the partner API, B2B integrations</strong> and links used by external providers.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Why it matters</dt><dd>Handovers can be proven where it matters, and nothing gets stuck where it does not apply.</dd></div>
+            </dl>
+            <ul class="tags"><li>Policy design</li><li>Layered settings</li><li>Snapshot vs live</li><li>Jest</li></ul>
+          </div>
+
+          <div class="panel" data-demo="codes">
+            <div class="panel__bar"><span><i class="live" aria-hidden="true"></i>Interactive demo · delivery PIN</span><span class="panel__tag">example domain</span></div>
+            <div class="panel__body">
+              <p class="try">An example parcel-delivery app. Create orders, change a setting, then switch between snapshot and live.</p>
+
+              <div class="controls controls--stack">
+                <div class="field">
+                  <span class="field__k">Delivery method</span>
+                  <div class="seg" role="group" aria-label="Delivery method" id="dMethod">
+                    <button type="button" data-v="courier" class="is-on">Courier</button>
+                    <button type="button" data-v="locker">Locker</button>
+                    <button type="button" data-v="pickup">Pickup point</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="levels">
+                <label class="switch"><input type="checkbox" id="dGlobal" checked><span class="switch__ui"></span>Store-wide</label>
+                <label class="switch"><input type="checkbox" id="dCat" checked><span class="switch__ui"></span>Category</label>
+                <label class="switch"><input type="checkbox" id="dOpt" checked><span class="switch__ui"></span><span id="dOptLabel">Courier</span></label>
+              </div>
+
+              <ol class="chain" id="dChain" aria-label="How the answer is decided"></ol>
+
+              <div class="actions">
+                <button class="btn btn--solid btn--sm" type="button" id="dCreate">Create order</button>
+                <div class="seg" role="group" aria-label="When the answer is decided" id="dMode">
+                  <button type="button" data-v="snapshot" class="is-on">Snapshot at creation</button>
+                  <button type="button" data-v="live">Live at completion</button>
+                </div>
+              </div>
+
+              <ul class="orders" id="dOrders" aria-live="polite"></ul>
+              <p class="hint" id="dHint"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="sec" id="experience">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've worked.</h2>
+        </header>
+
+        <article class="job">
+          <header class="job__head">
+            <div>
+              <h3>Software Engineer, Backend</h3>
+              <p class="job__org">Mismar <span>· Saudi automotive-services platform (B2C and B2B)</span></p>
+            </div>
+            <div class="job__meta">
+              <span class="job__date">Sep 2025 — Present <span class="job__dur" data-from="2025-09"></span></span>
+              <span>Riyadh, Saudi Arabia · Remote</span>
+            </div>
+          </header>
+          <ul class="chips chips--sm">
+            <li>NestJS</li><li>TypeScript</li><li>MySQL</li><li>Sequelize</li><li>MongoDB</li><li>Redis</li><li>BullMQ</li><li>Firebase</li><li>AWS S3</li><li>Unleash</li><li>Jest</li><li>Docker</li>
+          </ul>
+          <p class="job__lead">Besides the four systems in Selected work, my work at Mismar covers:</p>
+
+          <div class="grid">
+            <article class="card">
+              <p class="card__k">Integrations</p>
+              <h4>Partner and quotation APIs</h4>
+              <p>Built partner and workshop APIs for B2B orders and cost invoices, integrating independently hosted systems over <strong>REST and asynchronous events</strong>. Decoupled quotations from pricing requests with <strong>independent data snapshots</strong> in a shared layer reused across APIs.</p>
+            </article>
+            <article class="card">
+              <p class="card__k">Database</p>
+              <h4>Migrations and performance</h4>
+              <p>Wrote <strong>35+ schema and production data migrations</strong>, including batch backfills. Improved query-heavy flows through query rewrites, association changes and indexing decisions.</p>
+            </article>
+            <article class="card">
+              <p class="card__k">Quality</p>
+              <h4>Testing and production support</h4>
+              <p>Added <strong>45+ Jest test suites</strong>, including unit and characterization tests on critical flows. Traced root causes and fixed production issues in status reporting and <strong>role-based access checks</strong>.</p>
+            </article>
+            <article class="card">
+              <p class="card__k">Customer support</p>
+              <h4>Support ticketing</h4>
+              <p>Extended the support-ticket system with a <strong>policy layer</strong>: creation permissions by order status, reopen caps and closure rules. Restricted ticket access to the owning user and moved attachment files <strong>before database writes</strong> to prevent data loss.</p>
+            </article>
+            <article class="card">
+              <p class="card__k">Background work</p>
+              <h4>Notifications, jobs and real-time</h4>
+              <p>Delivered <strong>push and SMS notifications</strong>, including points-earned and order-update notifications, and scheduled jobs for <strong>subscription expiry reminders</strong>, expiring subscriptions and deducting expired credits. Synced chat and back-office presence through <strong>Firebase Firestore</strong>.</p>
+            </article>
+          </div>
+        </article>
+
+        <article class="job job--minor">
+          <header class="job__head">
+            <div>
+              <h3>DevOps Engineer Intern</h3>
+              <p class="job__org">Fawry <span>· fintech</span></p>
+            </div>
+            <div class="job__meta">
+              <span class="job__date">Oct 2022 — Jan 2023 <span class="job__dur" data-from="2022-10" data-to="2023-01"></span></span>
+              <span>Smart Village, Egypt</span>
+            </div>
+          </header>
+          <p class="job__lead">Supported development teams with CI/CD pipelines, containerization and deployment workflows in a large-scale fintech environment.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="sec sec--alt" id="skills">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">Skills</p>
+          <h2>What I work with.</h2>
+        </header>
+        <dl class="skills">
+          <div><dt>Languages</dt><dd><ul class="chips"><li class="is-core">TypeScript</li><li>JavaScript (ES6+)</li><li>SQL</li><li>Bash</li></ul></dd></div>
+          <div><dt>Backend</dt><dd><ul class="chips"><li class="is-core">Node.js</li><li class="is-core">NestJS</li><li>Express.js</li><li>RESTful API design</li><li>JWT authentication</li><li>Role-based access control</li></ul></dd></div>
+          <div><dt>Architecture and design</dt><dd><ul class="chips"><li>SOLID</li><li>Design patterns (Adapter)</li><li>Dependency injection</li><li>Event-driven integration</li><li>Feature flags</li></ul></dd></div>
+          <div><dt>Databases</dt><dd><ul class="chips"><li class="is-core">MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>Sequelize</li><li>Mongoose</li><li>Migrations</li><li>Query optimization</li><li>Transactions</li></ul></dd></div>
+          <div><dt>Queues and caching</dt><dd><ul class="chips"><li class="is-core">Redis</li><li>BullMQ</li><li>Scheduled and cron jobs</li><li>Push and SMS notifications</li></ul></dd></div>
+          <div><dt>Business domains</dt><dd><ul class="chips"><li>Loyalty points lifecycle</li><li>Refunds and reward reversal</li><li>Monetary precision</li><li>VAT pricing</li><li>Order scheduling</li><li>Verification codes</li></ul></dd></div>
+          <div><dt>Cloud and third-party</dt><dd><ul class="chips"><li>AWS S3</li><li>Firebase (Firestore)</li><li>Stripe</li><li>SendGrid</li><li>Unleash</li></ul></dd></div>
+          <div><dt>Testing</dt><dd><ul class="chips"><li>Jest</li><li>Unit testing</li><li>Characterization testing</li><li>API testing (Postman)</li></ul></dd></div>
+          <div><dt>DevOps and tools</dt><dd><ul class="chips"><li>Git</li><li>Docker</li><li>Docker Compose</li><li>Linux</li><li>CI/CD</li><li>Swagger / OpenAPI</li><li>Claude Code</li></ul></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="sec" id="projects">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">Projects</p>
+          <h2>Built outside work.</h2>
+        </header>
+
+        <div class="grid grid--2">
+          <article class="card card--proj">
+            <p class="card__k">Backend API</p>
+            <h3>ShopSphere E-Commerce API</h3>
+            <p>RESTful APIs for products, carts, orders and checkout with <strong>Stripe</strong> payments, secured with <strong>JWT authentication and role-based access control</strong>. MongoDB schemas and request validation for product and order data integrity.</p>
+            <ul class="chips chips--sm"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Stripe</li><li>JWT</li></ul>
+            <a class="link" href="https://github.com/Mahmoud-Shetawy/ShopSphere" target="_blank" rel="noopener">View source code <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="card card--proj">
+            <p class="card__k">Graduation project · graded A+</p>
+            <h3>Homely, AR furniture platform</h3>
+            <p>Backend API for a mobile app that lets people place 3D furniture in their home using augmented reality. <strong>Stripe</strong> payments with webhooks, <strong>SendGrid</strong> email notifications, authentication and centralized error handling.</p>
+            <ul class="chips chips--sm"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Stripe</li><li>SendGrid</li></ul>
+          </article>
+          <article class="card card--proj">
+            <p class="card__k">Systems</p>
+            <h3>Bash DBMS simulation</h3>
+            <p>A command-line database management system written entirely in Bash: databases and tables with typed columns and a primary key, type-checked inserts and updates, and file-based storage.</p>
+            <ul class="chips chips--sm"><li>Bash</li></ul>
+          </article>
+          <article class="card card--proj card--yt">
+            <p class="card__k">Teaching · YouTube, in Arabic</p>
+            <h3 lang="ar" dir="rtl">برمجة مع شتيوي</h3>
+            <p>I explain backend engineering in Arabic. The current series goes through <em>Node.js Design Patterns</em> chapter by chapter.</p>
+            <a class="link" href="https://youtu.be/pXfWjVmdiQc" target="_blank" rel="noopener">Watch an episode <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="sec sec--alt" id="education">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">Education</p>
+          <h2>Degree and training.</h2>
+        </header>
+
+        <ol class="entries">
+          <li class="entry">
+            <div class="entry__when">
+              <time>Oct 2024 — Jun 2025</time>
+              <span>Egypt · 9 months, full-time</span>
+            </div>
+            <div class="entry__what">
+              <h3>Professional Diploma in Open Source Application Development</h3>
+              <p class="entry__org">Information Technology Institute (ITI)</p>
+              <ul class="did">
+                <li>Intensive program covering <strong>Node.js, MongoDB, Docker, Linux and CI/CD</strong> through team projects.</li>
+                <li>Built the <strong>ShopSphere</strong> e-commerce API here (see Projects).</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="entry__when">
+              <time>Sep 2019 — Jun 2023</time>
+              <span>Menofia, Egypt</span>
+            </div>
+            <div class="entry__what">
+              <h3>B.Sc. in Computer Science</h3>
+              <p class="entry__org">Faculty of Computers and Information, Menofia University</p>
+              <ul class="did">
+                <li>Grade: <strong>Good</strong>.</li>
+                <li>Graduation project: <strong>Homely</strong>, an AR furniture app. I built the backend. Graded <strong>Excellent (A+)</strong>.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ LEADERSHIP ============ -->
+    <section class="sec" id="leadership">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">Leadership and volunteering</p>
+          <h2>Leading teams outside the code.</h2>
+        </header>
+
+        <ol class="entries">
+          <li class="entry">
+            <div class="entry__when">
+              <time>Aug 2021 — Nov 2022</time>
+              <span>Menofia University</span>
+            </div>
+            <div class="entry__what">
+              <h3>Head of Human Resources</h3>
+              <p class="entry__org">ICPC Menofia Community</p>
+              <ul class="did">
+                <li>Led an <strong>8-member HR team</strong>.</li>
+                <li>Managed recruitment and training for <strong>100+ competitive programmers</strong>.</li>
+                <li>Organized technical workshops and regional ICPC participation.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="entry__when">
+              <time>Sep 2020 — May 2023</time>
+              <span>Community service</span>
+            </div>
+            <div class="entry__what">
+              <h3>HR Team Member</h3>
+              <p class="entry__org">Life Makers Foundation</p>
+              <ul class="did">
+                <li>Coordinated volunteer teams, schedules and resources for community projects serving <strong>500+ families</strong>.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <header class="contact__head">
+          <p class="eyebrow">Contact</p>
+          <h2>Building something where correctness matters? <em>Let's talk.</em></h2>
+          <p class="sec__sub">Email is the best way to reach me. You can also find me on LinkedIn, see my code on GitHub, or watch me explain backend topics on YouTube.</p>
+        </header>
+
+        <div class="reach">
+          <div class="reach__card reach__card--main">
+            <span class="reach__icon" aria-hidden="true"><svg class="ico"><use href="#i-mail"/></svg></span>
+            <div class="reach__body">
+              <span class="reach__k">Email</span>
+              <a class="reach__v" href="mailto:mahmoud.shetawy22@gmail.com">mahmoud.shetawy22@gmail.com</a>
+              <div class="reach__actions">
+                <a class="btn btn--solid btn--sm" href="mailto:mahmoud.shetawy22@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>Send an email</a>
+                <button class="btn btn--sm" type="button" id="copyEmail" data-email="mahmoud.shetawy22@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy address</span></button>
+              </div>
+            </div>
+          </div>
+
+          <a class="reach__card" href="https://linkedin.com/in/mahmoud-shetawy" target="_blank" rel="noopener">
+            <span class="reach__icon reach__icon--linkedin" aria-hidden="true"><svg class="ico ico--brand"><use href="#i-linkedin"/></svg></span>
+            <span class="reach__body"><span class="reach__k">LinkedIn</span><span class="reach__v">in/mahmoud-shetawy</span></span>
+            <svg class="ico reach__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="reach__card" href="https://github.com/Mahmoud-Shetawy" target="_blank" rel="noopener">
+            <span class="reach__icon reach__icon--github" aria-hidden="true"><svg class="ico ico--brand"><use href="#i-github"/></svg></span>
+            <span class="reach__body"><span class="reach__k">GitHub</span><span class="reach__v">Mahmoud-Shetawy</span></span>
+            <svg class="ico reach__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="reach__card" href="https://youtu.be/pXfWjVmdiQc" target="_blank" rel="noopener">
+            <span class="reach__icon reach__icon--youtube" aria-hidden="true"><svg class="ico ico--brand"><use href="#i-youtube"/></svg></span>
+            <span class="reach__body"><span class="reach__k">YouTube</span><span class="reach__v" lang="ar" dir="rtl">برمجة مع شتيوي</span></span>
+            <svg class="ico reach__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="reach__card" href="assets/Mahmoud_Shetawy_CV.pdf" target="_blank" rel="noopener">
+            <span class="reach__icon" aria-hidden="true"><svg class="ico"><use href="#i-file"/></svg></span>
+            <span class="reach__body"><span class="reach__k">CV</span><span class="reach__v">PDF · 2 pages</span></span>
+            <svg class="ico reach__arrow" aria-hidden="true"><use href="#i-download"/></svg>
+          </a>
+          <div class="reach__card reach__card--static">
+            <span class="reach__icon" aria-hidden="true"><svg class="ico"><use href="#i-pin"/></svg></span>
+            <span class="reach__body"><span class="reach__k">Based in</span><span class="reach__v">Cairo, Egypt · open to remote</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year">2026</span> Mahmoud Shetawy</span>
+      <nav class="foot__links" aria-label="Profiles">
+        <a href="https://linkedin.com/in/mahmoud-shetawy" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico ico--brand" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+        <a href="https://github.com/Mahmoud-Shetawy" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico ico--brand" aria-hidden="true"><use href="#i-github"/></svg></a>
+        <a href="https://youtu.be/pXfWjVmdiQc" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ico ico--brand" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+        <a href="mailto:mahmoud.shetawy22@gmail.com" aria-label="Email"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></a>
+        <a href="#top" class="foot__top">Back to top <span aria-hidden="true">↑</span></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js?v=16" defer></script>
+</body>
+</html>
